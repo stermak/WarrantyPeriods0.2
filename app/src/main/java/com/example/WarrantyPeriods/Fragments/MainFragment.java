@@ -15,7 +15,7 @@ import androidx.navigation.Navigation;
 import com.example.WarrantyPeriods.R;
 
 
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment   {
 
 
 

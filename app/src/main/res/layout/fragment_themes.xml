@@ -26,6 +26,8 @@
         android:layout_height="80dp"
         android:layout_gravity="start"
         android:layout_marginVertical="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
         android:text="@string/LightTheme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +38,8 @@
         android:layout_height="80dp"
         android:layout_gravity="end"
         android:layout_marginVertical="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/DarkTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -62,9 +66,9 @@
         android:id="@+id/BtnSettings"
         android:layout_width="122dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/Settings"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
