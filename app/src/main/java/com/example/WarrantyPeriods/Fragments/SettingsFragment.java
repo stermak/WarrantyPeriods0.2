@@ -32,6 +32,7 @@ public class SettingsFragment extends Fragment {
         Button BtnSettings = view.findViewById(R.id.BtnSettings);
         Button BtnProfile = view.findViewById(R.id.BtnProfile);
         Button BtnThemes = view.findViewById(R.id.BtnThemes);
+        Button BtnDevs = view.findViewById(R.id.BtnDevs);
         BtnHome.setOnClickListener(viewCreate -> {
             Bundle bundleHome = new Bundle();
             Navigation.findNavController(view).navigate(R.id.action_settingsFragment_to_mainFragment, bundleHome);
@@ -51,6 +52,10 @@ public class SettingsFragment extends Fragment {
         BtnThemes.setOnClickListener(viewCreate -> {
             Bundle bundleThemes = new Bundle();
             Navigation.findNavController(view).navigate(R.id.action_settingsFragment_to_themesFragment, bundleThemes);
+        });
+        BtnDevs.setOnClickListener(viewCreate -> {
+            Bundle bundleDevs = new Bundle();
+            Navigation.findNavController(view).navigate(R.id.action_settingsFragment_to_devsFragment, bundleDevs);
         });
     }
 }

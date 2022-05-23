@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_settingsFragment_self"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_devsFragment"
+            app:destination="@id/devsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -118,6 +121,21 @@
             app:destination="@id/spisokFragment" />
         <action
             android:id="@+id/action_privacyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/devsFragment"
+        android:name="com.example.WarrantyPeriods.Fragments.DevsFragment"
+        android:label="fragment_devs"
+        tools:layout="@layout/fragment_devs" >
+        <action
+            android:id="@+id/action_devsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_devsFragment_to_spisokFragment"
+            app:destination="@id/spisokFragment" />
+        <action
+            android:id="@+id/action_devsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 

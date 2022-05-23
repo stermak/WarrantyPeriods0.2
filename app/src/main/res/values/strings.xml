@@ -27,4 +27,25 @@
     <string name="Privacy">Конфиденциальность</string>
     <string name="Exit">Выход</string>
     <string name="Description">Описание</string>
+    <string name="PleaseWait">Пожалуйста подождите…</string>
+    <string name="warrantyimage">Warranty Image</string>
+    <string name="SelectCategories">Выбери категории:</string>
+    <string name="TV">Телевизор</string>
+    <string name="MobilePhone">Телефон</string>
+    <string name="VideoGraphics">Видеокарта</string>
+    <string name="CPU">Процессор</string>
+    <string name="Monitor">Монитор</string>
+    <string name="Laptop">Ноутбук</string>
+    <string name="Sony">Sony</string>
+    <string name="HP">HP</string>
+    <string name="LG">LG</string>
+    <string name="Samsung">Samsung</string>
+    <string name="Kitchen">Кухня</string>
+    <string name="living_room">Гостинная</string>
+    <string name="own_room">Своя комната</string>
+    <string name="Xiaomi">Xiaomi</string>
+    <string name="Apple">Apple</string>
+    <string name="Devs">Разработчики</string>
+    <string name="GreenTheme">Зеленая тема</string>
+    <string name="BlueTheme">Синяя тема</string>
 </resources>

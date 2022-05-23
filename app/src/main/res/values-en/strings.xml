@@ -27,4 +27,25 @@
     <string name="Privacy">Privacy</string>
     <string name="Exit">Exit</string>
     <string name="Description">Description</string>
+    <string name="PleaseWait">Please Wait…</string>
+    <string name="warrantyimage">Warranty Image</string>
+    <string name="SelectCategories">Select Categories:</string>
+    <string name="TV">TV</string>
+    <string name="MobilePhone">Mobile Phone</string>
+    <string name="VideoGraphics">Video Graphics</string>
+    <string name="CPU">CPU</string>
+    <string name="Monitor">Monitor</string>
+    <string name="Laptop">Laptop</string>
+    <string name="Sony">Sony</string>
+    <string name="HP">HP</string>
+    <string name="LG">LG</string>
+    <string name="Samsung">Samsung</string>
+    <string name="Kitchen">Kitchen</string>
+    <string name="living_room">Living room</string>
+    <string name="own_room">Own room</string>
+    <string name="Xiaomi">Xiaomi</string>
+    <string name="Apple">Apple</string>
+    <string name="Devs">Devs</string>
+    <string name="GreenTheme">Green Theme</string>
+    <string name="BlueTheme">Blue Theme</string>
 </resources>

@@ -39,7 +39,7 @@ public class SpisokFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_spisok, container, false);
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
-        RecyclerView mFirestor_list = view.findViewById(R.id.recycler1);
+        RecyclerView mFirestore_list = view.findViewById(R.id.recycler1);
 
         Query query = firebaseFirestore.collection("list");
 
@@ -64,9 +64,9 @@ public class SpisokFragment extends Fragment {
                 holder.desc.setText(model.getdesc());
             }
         };
-        mFirestor_list.setHasFixedSize(true);
-        mFirestor_list.setLayoutManager(new LinearLayoutManager(getContext()));
-        mFirestor_list.setAdapter(adapter);
+        mFirestore_list.setHasFixedSize(true);
+        mFirestore_list.setLayoutManager(new LinearLayoutManager(getContext()));
+        mFirestore_list.setAdapter(adapter);
         return view;
     }
 
