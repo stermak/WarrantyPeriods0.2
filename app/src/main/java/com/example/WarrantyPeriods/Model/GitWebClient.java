@@ -1,4 +1,4 @@
-package com.example.WarrantyPeriods.Activity;
+package com.example.WarrantyPeriods.Model;
 
 import android.content.Intent;
 import android.net.Uri;

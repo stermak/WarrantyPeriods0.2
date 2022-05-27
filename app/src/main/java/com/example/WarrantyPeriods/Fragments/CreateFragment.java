@@ -161,7 +161,7 @@ public class CreateFragment extends Fragment {
                 .addOnSuccessListener(taskSnapshot -> {
                     Toast.makeText(getContext(), "Image uploaded", Toast.LENGTH_SHORT).show();
                     imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                        docData.put("url", uri.toString());
+                        docData.put("image", uri.toString());
                         uploadDocument(docData, docId);
                     });
                 })

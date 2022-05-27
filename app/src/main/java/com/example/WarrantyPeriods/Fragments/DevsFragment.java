@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 
-import com.example.WarrantyPeriods.Activity.GitWebClient;
+import com.example.WarrantyPeriods.Model.GitWebClient;
 import com.example.WarrantyPeriods.R;
 
 public class DevsFragment extends Fragment {

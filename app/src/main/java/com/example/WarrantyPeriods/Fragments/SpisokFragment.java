@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -62,6 +63,11 @@ public class SpisokFragment extends Fragment {
                 holder.CompanyName.setText(model.getCompanyName());
                 holder.year1.setText(model.getYear1());
                 holder.desc.setText(model.getdesc());
+                holder.cardView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
             }
         };
         mFirestore_list.setHasFixedSize(true);
@@ -73,6 +79,7 @@ public class SpisokFragment extends Fragment {
     private static class SpisokViewHolder extends RecyclerView.ViewHolder{
 
         private final TextView WarrantyName , CompanyName , year1 , desc;
+        private final CardView cardView;
 
         public SpisokViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -80,6 +87,7 @@ public class SpisokFragment extends Fragment {
             CompanyName = itemView.findViewById(R.id.CompanyName);
             year1 = itemView.findViewById(R.id.year1);
             desc = itemView.findViewById(R.id.desc);
+            cardView = itemView.findViewById(R.id.cardView);
         }
     }
 
