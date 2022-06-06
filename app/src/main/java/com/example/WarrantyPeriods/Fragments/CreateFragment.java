@@ -198,6 +198,7 @@ public class CreateFragment extends Fragment {
             chip.setChecked(false);
         }
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

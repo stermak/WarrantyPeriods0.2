@@ -9,8 +9,9 @@
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
     android:scrollbars="vertical"
+    android:clickable="false"
+    android:focusable="false"
     app:cardCornerRadius="40dp">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -129,8 +130,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/samsung" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

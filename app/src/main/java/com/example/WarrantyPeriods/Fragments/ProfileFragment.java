@@ -13,13 +13,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.WarrantyPeriods.Activity.LogActivity;
 import com.example.WarrantyPeriods.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
     public Button signOut;
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase db;
+    private DatabaseReference myRef;
+    TextView nameProf , emailProf;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,14 +42,47 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseDatabase.getInstance();
+        myRef = db.getReference();
+        FirebaseUser user = mAuth.getCurrentUser();
+        nameProf = view.findViewById(R.id.nameProf);
+        emailProf = view.findViewById(R.id.emailProf);
         //Button
         signOut = view.findViewById(R.id.signOutButton);
-
         signOut.setOnClickListener(view12 -> {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(getContext(), LogActivity.class);
             startActivity(intent);
         });
+
+        myRef.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                assert user != null;
+                Object nameFrom = snapshot.child(user.getUid()).child("name").getValue();
+                nameProf.setText(nameFrom.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        myRef.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Object emailFrom = snapshot.child(user.getUid()).child("email").getValue();
+                emailProf.setText(emailFrom.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         return view;
     }
     @Override

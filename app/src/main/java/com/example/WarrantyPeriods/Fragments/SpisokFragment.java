@@ -1,5 +1,7 @@
 package com.example.WarrantyPeriods.Fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +28,7 @@ import com.google.firebase.firestore.Query;
 public class SpisokFragment extends Fragment {
 
     private FirestoreRecyclerAdapter adapter;
+    CardView cardView;
 
     public SpisokFragment() {
     }
@@ -33,6 +36,7 @@ public class SpisokFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -41,7 +45,6 @@ public class SpisokFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_spisok, container, false);
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         RecyclerView mFirestore_list = view.findViewById(R.id.recycler1);
-
         Query query = firebaseFirestore.collection("list");
 
         FirestoreRecyclerOptions<SpisokModel> options = new FirestoreRecyclerOptions.Builder<SpisokModel>()
@@ -63,11 +66,6 @@ public class SpisokFragment extends Fragment {
                 holder.CompanyName.setText(model.getCompanyName());
                 holder.year1.setText(model.getYear1());
                 holder.desc.setText(model.getdesc());
-                holder.cardView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
             }
         };
         mFirestore_list.setHasFixedSize(true);
@@ -79,7 +77,6 @@ public class SpisokFragment extends Fragment {
     private static class SpisokViewHolder extends RecyclerView.ViewHolder{
 
         private final TextView WarrantyName , CompanyName , year1 , desc;
-        private final CardView cardView;
 
         public SpisokViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -87,7 +84,6 @@ public class SpisokFragment extends Fragment {
             CompanyName = itemView.findViewById(R.id.CompanyName);
             year1 = itemView.findViewById(R.id.year1);
             desc = itemView.findViewById(R.id.desc);
-            cardView = itemView.findViewById(R.id.cardView);
         }
     }
 

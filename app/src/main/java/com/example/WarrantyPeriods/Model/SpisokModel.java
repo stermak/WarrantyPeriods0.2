@@ -5,7 +5,6 @@ import android.view.View;
 
 public class SpisokModel {
     private String WarrantyName ,CompanyName , year1 , desc ;
-    private View imageView;
     public SpisokModel() {}
 
     public String getWarrantyName()
